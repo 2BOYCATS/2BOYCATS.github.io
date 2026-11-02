@@ -1,6 +1,20 @@
 const topBtn = document.getElementById("topBtn")
 const myMenu = document.getElementById("myMenu");
+const menuBackdrop = document.getElementById("menuBackdrop");
 
+function toggleHam() {
+  myMenu.classList.toggle("menu-active")
+}
+
+function closeMenu() {
+  myMenu.classList.remove("menu-active");
+  menuBackdrop.classList.remove("is-active");
+}
+
+function toggleHam() {
+  const isOpen = myMenu.classList.toggle("menu-active");
+  menuBackdrop.classList.toggle("is-active", isOpen);
+}
 
 window.addEventListener("scroll", () =>{
     topBtn.classList.toggle("show", window.scrollY > 300)
@@ -20,6 +34,4 @@ myMenu.querySelectorAll('a').forEach((link) => {
   });
 });
 
-function toggleHam() {
-  myMenu.classList.toggle("menu-active")
-}
+menuBackdrop.addEventListener("click", closeMenu);

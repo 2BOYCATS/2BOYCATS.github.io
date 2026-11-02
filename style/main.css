@@ -736,6 +736,26 @@ footer p {
 @media (max-width: 950px) {
 
     /* navbar */
+    nav {
+        position: relative;
+        z-index: 20;
+    }
+
+    .menu-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    .menu-backdrop.is-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .menu, 
     .btn-cv {
         display: none;
