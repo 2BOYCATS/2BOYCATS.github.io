@@ -414,7 +414,8 @@ nav {
 .skill-stack{
     margin: 10px 0 0;
     display: flex;
-    gap: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 .skill-stack span {
     font-size: clamp(10px, 1.8vw, 14px);
@@ -423,6 +424,8 @@ nav {
     color: var(--ink);
     border: 1px solid #ead8df;
     border-radius: 22px;
+    white-space: nowrap;  
+    flex-shrink: 0;       
 }
 
 /* section project */
