@@ -28,10 +28,8 @@ window.addEventListener("load", () => {
   document.querySelector("#about").scrollIntoView({behavior: "smooth"})
 })
 
-myMenu.querySelectorAll('a').forEach((link) => {
-  link.addEventListener("click", () => {
-    myMenu.classList.remove("menu-active");
-  });
+myMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
 });
 
 menuBackdrop.addEventListener("click", closeMenu);
