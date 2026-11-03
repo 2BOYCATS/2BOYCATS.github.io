@@ -453,6 +453,12 @@ nav {
     box-shadow: 0 10px 32px rgb(0, 0, 0, 0.1);
 }
 
+.project-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .project-name{
     color: var(--ink);
     font-size: clamp(20px, 3vw, 28px);
@@ -461,7 +467,8 @@ nav {
 
 .project-stack {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
 } 
 .project-stack span{
     font-size: clamp(10px, 1.8vw, 14px);
@@ -821,6 +828,7 @@ footer p {
         text-align: center;
         justify-content: center;
     }
+
     .img-card, .project-desc {
         width: 100%;
         max-width: 400px;
