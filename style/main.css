@@ -133,11 +133,12 @@ nav {
 }
 
 
-.ham-menu {
+.ham-btn {
     cursor: pointer;
+    display: none;
 }
 
-.ham-menu div {
+.ham-btn div {
     width: 20px;
     height: 2px;
     background-color: var(--ink);
@@ -755,16 +756,17 @@ footer p {
 
 /* Responsive */
 
-@media (min-width: 950px) {
-    .ham-menu {
-        display: none;
-    }
-}
 
 /* Tables & Desktop */
 @media (max-width: 1032px) {
     .line-qr-card{
         padding: 0 1rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .ham-btn {
+        display: none;
     }
 }
 
@@ -777,57 +779,54 @@ footer p {
         z-index: 20;
     }
 
-    .menu-backdrop {
-        position: fixed;
-        inset: 0;
-        z-index: 10;
-        background: rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(3px);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-    }
-    .menu-backdrop.is-active {
-        opacity: 1;
-        visibility: visible;
-    }
-
     .menu, 
     .btn-cv {
         display: none;
     }
 
-    .nav-wrapper{
-        position: relative;
+    .ham-btn {
+        display: block;
     }
 
-    .menu.menu-active {
-        display: flex;
-        flex-direction: column;
+    .menu.active .mobile-cv {
+        display: block;
+    }
+
+    .menu.active{
         position: absolute;
         top: 100%;
         right: 1rem;
         left: 1rem;
+        display: flex;
+        flex-direction: column;
         padding: 1rem;
         background: var(--paper);
         border: 1px solid var(--accent);
         border-radius: 24px;
     }
 
-    .menu.menu-active .mobile-cv {
-        display: inline-block;
-    }
-
-    .menu li{
+    .menu.active li {
         margin: 0 1rem;
         padding: 10px 0;
         margin-top: 2rem;
-        border-bottom: 1px solid var(--accent);    
+        border-bottom: 1px solid var(--accent);
     }
-
-    .menu li a:hover::after {
+    .menu.active li a:hover::after {
         transform: scaleX(0);
     }
+
+    .menu-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        visibility: hidden;
+    }
+    .backdrop-open {
+        visibility: visible;
+    }
+    
 
     /* section home */
     .home{

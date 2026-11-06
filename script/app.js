@@ -1,35 +1,35 @@
 const topBtn = document.getElementById("topBtn")
 const myMenu = document.getElementById("myMenu");
 const menuBackdrop = document.getElementById("menuBackdrop");
+const hamBtn = document.getElementById('ham-btn')
 
-function toggleHam() {
-  myMenu.classList.toggle("menu-active")
+
+// Event click Hamburger bar -> show dropdown & bg blur
+const openMenu = () => {
+  myMenu.classList.toggle('active')
+  menuBackdrop.classList.toggle('backdrop-open')
 }
+hamBtn.addEventListener('click', openMenu)
 
-function closeMenu() {
-  myMenu.classList.remove("menu-active");
-  menuBackdrop.classList.remove("is-active");
+// click menu dropdown
+const closeMenu = () => {
+  myMenu.classList.remove('active')
+  menuBackdrop.classList.remove('backdrop-open')
 }
-
-function toggleHam() {
-  const isOpen = myMenu.classList.toggle("menu-active");
-  menuBackdrop.classList.toggle("is-active", isOpen);
+for (const list of myMenu.querySelectorAll('a')) {
+  list.addEventListener('click', closeMenu)
 }
+menuBackdrop.addEventListener('click', closeMenu)
 
+// Event click to Top
 window.addEventListener("scroll", () =>{
     topBtn.classList.toggle("show", window.scrollY > 300)
 })
-
 topBtn.addEventListener("click", () => {
     window.scrollTo({top:0, behavior: "smooth"})
 })
 
+// Event load page 
 window.addEventListener("load", () => {
   document.querySelector("#about").scrollIntoView({behavior: "smooth"})
 })
-
-myMenu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", closeMenu);
-});
-
-menuBackdrop.addEventListener("click", closeMenu);
