@@ -653,24 +653,24 @@ nav {
     margin: 36px 0;
 }
 
-.contact-info {
+.contact-info-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 14px;
 
-    padding: 20px;
+    padding: 1.5em;
     border: 1px solid var(--line);
     border-radius: 18px;
     background: var(--paper);
 }
 
-.contact-info a {
+.contact-info a{
     text-decoration: none;
     color: var(--deep);
     border: 1px solid var(--line);
     border-radius: 18px;
     padding: 20px;
+    margin: 1em 0;
 
     display: grid;
     grid-template-columns: 160px 1fr;
@@ -680,16 +680,29 @@ nav {
     color: var(--ink);
     font-weight: 600;
 }
+.contact-info a:hover {
+    transition: transform 0.5s ease;
+    transform: translateY(-3px);
+    background: var(--footer);
+}
 
 .contact-cv-link {
     align-self: flex-start;
-    color: #fff;
     background: var(--deep);
     border: 1px solid var(--deep);
     border-radius: 36px;
     padding: 12px 24px;
     font-size: 14px;
-    font-weight: 400;  
+    font-weight: 400; 
+}
+.contact-cv-link a {
+    text-decoration: none;
+    color: white;
+}
+.contact-cv-link:hover{
+    transition: transform 0.5s ease;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .line-qr-card {
@@ -729,18 +742,6 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.contact-info a:hover {
-    transition: transform 0.5s ease;
-    transform: translateY(-3px);
-    background: var(--footer);
-}
-
-.contact-cv-link:hover{
-    transition: transform 0.5s ease;
-    transform: scale(1.05);
-    cursor: pointer;
 }
 
 footer {
@@ -876,6 +877,7 @@ footer p {
     /* section contact */
     .contact-grid {
         grid-template-columns: 1fr;
+        justify-content: center;
     }
 
     .contact-info a {
