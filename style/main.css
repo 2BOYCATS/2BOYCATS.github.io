@@ -483,23 +483,6 @@ nav {
     transform: scaleX(1);
 }
 
-/* .project-title .left{
-    color: var(--ink);
-    font-size: clamp(18px, 3vw, 28px);
-    font-weight: 500;
-    line-height: 2;
-}
-.project-title-kicker,
-.project-title-title {
-    margin: 0;
-}
-
-.project-title .right a{
-    text-decoration: none;
-    color: var(--ink);
-} */
-
-
 .project-card {
     display: flex;
     justify-content: space-around;
