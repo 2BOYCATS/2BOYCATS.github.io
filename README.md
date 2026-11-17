@@ -4,8 +4,6 @@
  
 **🔗 [เปิดดูเว็บไซต์](https://2boycats.github.io/)**
  
-![Preview](./images/preview.png)
- 
 ## เนื้อหาในเว็บไซต์
  
 | ส่วน | รายละเอียด |
