@@ -41,17 +41,5 @@ cd 2BOYCATS.github.io
 ```
  
 จากนั้นเปิดไฟล์ `index.html` ด้วย Live Server ใน VS Code (หรือดับเบิลคลิกเปิดในเบราว์เซอร์ก็ได้)
- 
-## โครงสร้าง
- 
-```
-.
-├── index.html
-├── images/       # รูปโปรไฟล์ รูปตัวอย่างโปรเจกต์ QR Code
-└── documents/    # ไฟล์ CV (PDF)
-```
- 
-## หมายเหตุ
- 
-เว็บไซต์โฮสต์บน GitHub Pages และอัปเดตอัตโนมัติเมื่อ push ขึ้น branch `main`
+
  
