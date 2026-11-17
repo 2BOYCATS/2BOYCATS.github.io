@@ -32,7 +32,6 @@
 ## Tech Stack
  
 - HTML, CSS, JavaScript
-- Google Material Symbols (ไอคอน)
 - GitHub Pages (โฮสต์)
 ## รันในเครื่อง
  
